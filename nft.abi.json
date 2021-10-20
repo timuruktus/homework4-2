@@ -1,0 +1,52 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createCar",
+			"inputs": [
+				{"name":"name","type":"string"},
+				{"name":"speed","type":"uint256"},
+				{"name":"controllability","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sellCar",
+			"inputs": [
+				{"name":"carId","type":"uint256"},
+				{"name":"price","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getAllCars",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"speed","type":"uint256"},{"name":"level","type":"uint256"},{"name":"contollability","type":"uint256"},{"name":"forSale","type":"bool"},{"name":"price","type":"uint256"}],"name":"value0","type":"tuple[]"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"speed","type":"uint256"},{"name":"level","type":"uint256"},{"name":"contollability","type":"uint256"},{"name":"forSale","type":"bool"},{"name":"price","type":"uint256"}],"name":"carsArray","type":"tuple[]"},
+		{"name":"carIdToOwner","type":"map(uint256,uint256)"}
+	]
+}
